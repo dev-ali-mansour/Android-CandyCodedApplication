@@ -11,56 +11,13 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="0dp"
-        android:layout_marginRight="0dp"
         android:layout_marginTop="0dp"
+        android:layout_marginRight="0dp"
         android:adjustViewBounds="true"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/placeholder_landscape" />
-
-    <TextView
-        android:id="@+id/text_view_address"
-        android:layout_width="0dp"
-        android:layout_height="30dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="16dp"
-        android:gravity="center_vertical"
-        android:text="618 E South St Orlando, FL"
-        android:textColor="?android:attr/actionMenuTextColor"
-        android:textSize="18sp"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toRightOf="@+id/image_view_map"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_view_candy_store" />
-
-    <TextView
-        android:id="@+id/text_view_phone"
-        android:layout_width="0dp"
-        android:layout_height="30dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="16dp"
-        android:gravity="center_vertical"
-        android:text="(012)345-6789"
-        android:textColor="?android:attr/actionMenuTextColor"
-        android:textSize="18sp"
-        app:layout_constraintLeft_toLeftOf="@+id/text_view_address"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_view_map" />
-
-    <TextView
-        android:id="@+id/text_view_hours"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="0dp"
-        android:gravity="center_vertical"
-        android:text="Everyday 10am-10pm"
-        android:textSize="18sp"
-        app:layout_constraintLeft_toLeftOf="@+id/text_view_phone"
-        app:layout_constraintTop_toTopOf="@+id/image_view_hours" />
 
     <ImageView
         android:id="@+id/image_view_phone"
@@ -94,5 +51,50 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image_view_candy_store"
         app:srcCompat="@android:drawable/ic_dialog_map" />
+
+    <TextView
+        android:id="@+id/text_view_address"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="8dp"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:onClick="createMapIntent"
+        android:text="618 E South St Orlando, FL"
+        android:textColor="?android:attr/actionMenuTextColor"
+        android:textSize="18sp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toRightOf="@+id/image_view_map"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_view_candy_store" />
+
+    <TextView
+        android:id="@+id/text_view_phone"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center_vertical"
+        android:text="(012)345-6789"
+        android:textColor="?android:attr/actionMenuTextColor"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="@+id/text_view_address"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_view_map" />
+
+    <TextView
+        android:id="@+id/text_view_hours"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:gravity="center_vertical"
+        android:text="Everyday 10am-10pm"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="@+id/text_view_phone"
+        app:layout_constraintTop_toTopOf="@+id/image_view_hours" />
 
 </android.support.constraint.ConstraintLayout>
